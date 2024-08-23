@@ -54,7 +54,7 @@ header {
     background-color: azure;
     }
 
-.header-bottom div {
+.header-bottom, .menu, .larger-sub-title  {
     font-family: "Jersey 10", sans-serif;
     font-weight: 100;
     font-size: 3vh;
@@ -87,12 +87,17 @@ main {
     .hamburger {
         display: block;
         font-size: 30px;
-        transition: transform 1s ease; 
+        padding-right:2vw;
+        transition: transform 0.5s ease;
     }
 
     .hamburger:hover {
         transform: scale(1.5);
         cursor: pointer;
+    }
+
+    .hamburger.open {
+        transform: rotate(180deg)
     }
 
     .header-bottom.active {
@@ -103,7 +108,11 @@ main {
         display: none;
     }
 
-    main{
+    .header-bottom, .menu {
+        font-size: 5vh;
+    }
+
+    main {
         height:calc(100% - 8vh);
     }
 
